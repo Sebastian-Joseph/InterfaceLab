@@ -1,3 +1,6 @@
 public interface Lockable {
-     int setKey = 55;
+     public void setKey(int key);
+     public void lock(int lock);
+     public void unlock(int unlock);
+     public Boolean isLocked();
 }
