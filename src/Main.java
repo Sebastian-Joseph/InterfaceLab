@@ -8,7 +8,7 @@ class Main {
 
         System.out.println("Roll the die or Try the key?");
         possi = scan.nextLine();
-        if (possi == "Roll the die") {
+        if (possi.equals("Roll the die")) {
 
         }
 
