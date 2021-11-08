@@ -1,7 +1,7 @@
-public class Keys implements Lockable {
+public abstract class Keys implements Lockable {
     private String question;
-    private int answer;
-    private int key;
+    public static String answer;
+    private String key;
 
     public Keys(String rquestion) {
         question = rquestion;
@@ -10,8 +10,8 @@ public class Keys implements Lockable {
     }
 
 
-    public void setKey(int key) {
-        key = 5;
+    public void setKey(String key) {
+        key = "5";
     }
 
     public void lock(int lock) {
@@ -19,18 +19,21 @@ public class Keys implements Lockable {
     }
 
 
-    public void unlock(int unlock) {
+    public int unlock(int unlock) {
         unlock = 1;
+        return unlock;
     }
 
 
     public Boolean isLocked() {
-        return answer == key;
+        return Boolean.FALSE;
 
     }
 
-    public int getKey() {
+    public String getKey() {
+
         return key;
+
     }
 
     public String getQuestion() {
